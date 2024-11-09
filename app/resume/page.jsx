@@ -1,7 +1,25 @@
 "use client"
 
-import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FsNodeJs, FaNodeJs,} from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs} from "react-icons/si";
+import {
+    FaHtml5,
+    FaCss3,
+    FaJs,
+    FaReact,
+    FaFigma,
+    FaNodeJs,
+    FaPython,
+    FaJava,
+  } from "react-icons/fa";
+  import {
+    SiTailwindcss,
+    SiNextdotjs,
+    SiFlutter,
+    SiCplusplus,
+    SiOracle,
+    SiDjango,
+    SiTensorflow,
+    SiScikitlearn,
+  } from "react-icons/si";
 
 const about = {
     title: 'About me',
@@ -91,64 +109,64 @@ const education = {
 };
 
 //skills data
-const skills ={
+const skills = {
     title: "My skills",
-    description: "kjs  sjdkljf sjk fsjhlkfs djfjsdf slf kjs lkjf ksjlj",
+    description: "A summary of my technical skills and technologies I'm proficient in.",
     skillList: [
-        {
-            icon: <FaHtml5 />,
-            name: "HTML5",
-        },
-        {
-            icon: <FaReact />,
-            name: "react.js",
-        },
-        {
-            icon: <SiNextdotjs />,
-            name: "next.js",
-        },
-        {
-            icon: <SiTailwindcss />,
-            name: "taiwind.css",
-        },
-        {
-            icon: <FaNodeJs />,
-            name: "node.js",
-        },
-        {
-            icon: <FaFigma />,
-            name: "Figma",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "Python",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "Flutter",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "C++",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "ORACLE",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "Django",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "AI",
-        },
-        {
-            icon: <FaHtml5 />,
-            name: "ML",
-        },
-    ]
-};
+      {
+        icon: <FaPython />,
+        name: "Python",
+      },
+      {
+        icon: <SiFlutter />,
+        name: "Flutter",
+      },
+      {
+        icon: <SiCplusplus />,
+        name: "C++",
+      },
+      {
+        icon: <SiOracle />,
+        name: "Oracle",
+      },
+      {
+        icon: <SiDjango />,
+        name: "Django",
+      },
+      {
+        icon: <SiTensorflow />,
+        name: "AI (TensorFlow)",
+      },
+      {
+        icon: <SiScikitlearn />,
+        name: "ML (scikit-learn)",
+      },
+      {
+        icon: <FaHtml5 />,
+        name: "HTML5",
+      },
+      {
+        icon: <FaReact />,
+        name: "React.js",
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "Next.js",
+      },
+      {
+        icon: <SiTailwindcss />,
+        name: "Tailwind CSS",
+      },
+      {
+        icon: <FaNodeJs />,
+        name: "Node.js",
+      },
+      {
+        icon: <FaFigma />,
+        name: "Figma",
+      },
+    ],
+  };
 
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
@@ -159,7 +177,7 @@ import {
     TooltipTrigger, 
     } from "@/components/ui/tooltip";
 
-import { scrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {motion } from "framer-motion";
 
 const Resume = () => {
@@ -192,7 +210,7 @@ const Resume = () => {
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                                <scrollArea className="h-[480px]">
+                                <ScrollArea className="h-[480px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => {
                                             return (
@@ -214,7 +232,7 @@ const Resume = () => {
                                             );
                                         })}
                                     </ul>
-                                </scrollArea>
+                                </ScrollArea>
                             </div>
                         </TabsContent>
                         {/* education */}
@@ -222,7 +240,7 @@ const Resume = () => {
                         <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{education.title}</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
-                                <scrollArea className="h-[480px]">
+                                <ScrollArea className="h-[480px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {education.items.map((item, index) => {
                                             return (
@@ -244,7 +262,7 @@ const Resume = () => {
                                             );
                                         })}
                                     </ul>
-                                </scrollArea>
+                                </ScrollArea>
                             </div>
                         </TabsContent>
                         {/* Skills */}
