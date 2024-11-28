@@ -20,7 +20,7 @@ const info = [
     {
         icon: <FaPhoneAlt />,
         title: "Phone",
-        description: "(+880) 12878349874",
+        description: "(+880) 1728977294",
     },
     {
         icon: <FaEnvelope />,
@@ -30,7 +30,7 @@ const info = [
     {
         icon: <FaMapMarkedAlt />,
         title: "Address",
-        description: "Dhaka, BD",
+        description: "Mirpur-12, Dhaka, BD",
     },
 ];
 
@@ -55,7 +55,7 @@ const Contact = () => {
                                 Let&apos;s work together
                             </h3>
                             <p className="text-white/60">
-                                fdskj jf igjd skj ks df hs fhj odif
+                                The form is not functional yet. Really appolysing for this...
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input type="firstname" placeholder="Firstname"/>

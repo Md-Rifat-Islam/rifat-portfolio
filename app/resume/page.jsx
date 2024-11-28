@@ -1,207 +1,208 @@
-"use client"
+"use client";
 
 import {
-    FaHtml5,
-    FaCss3,
-    FaJs,
-    FaReact,
-    FaFigma,
-    FaNodeJs,
-    FaPython,
-    FaJava,
-  } from "react-icons/fa";
-  import {
-    SiTailwindcss,
-    SiNextdotjs,
-    SiFlutter,
-    SiCplusplus,
-    SiOracle,
-    SiDjango,
-    SiTensorflow,
-    SiScikitlearn,
-  } from "react-icons/si";
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaFigma,
+  FaNodeJs,
+  FaPython,
+  FaJava,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiFlutter,
+  SiCplusplus,
+  SiOracle,
+  SiDjango,
+  SiTensorflow,
+  SiScikitlearn,
+} from "react-icons/si";
 
 const about = {
-    title: 'About me',
-    description: "sfdhkj sjdhkjdhfkjs jfskljhfkjslkjf",
-    info: [
-        {
-            fieldName: "Name",
-            fieldValue: "Muhammad Rifat Islam",
-        },
-        {
-            fieldName: "Phone",
-            fieldValue: "(+880) 1728 977294",
-        },
-        {
-            fieldName: "Experience",
-            fieldValue: "2+ Years",
-        },
-        {
-            fieldName: "LeetCode",
-            fieldValue: "rifat___islam",
-        },
-        {
-            fieldName: "Nationality",
-            fieldValue: "Bangladeshi",
-        },
-        {
-            fieldName: "Email",
-            fieldValue: "muhammad.rifat.islam31@gmail.com",
-        },
-        {
-            fieldName: "Freelance",
-            fieldValue: "Available",
-        },
-        {
-            fieldName: "Languages",
-            fieldValue: "English, Bangla, Arabic, Urdu",
-        },
-    ],
+  title: "About Me",
+  description:
+    "I am a passionate software developer with expertise in full-stack development, machine learning, and cross-platform applications. With a focus on delivering impactful solutions, I thrive in creating efficient and scalable systems. Beyond technical skills, I am a proactive learner, team player, and dedicated to continuous improvement.",
+  info: [
+    {
+      fieldName: "Name",
+      fieldValue: "Muhammad Rifat Islam",
+    },
+    {
+      fieldName: "Phone",
+      fieldValue: "(+880) 1728 977294",
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: "2+ Years",
+    },
+    {
+      fieldName: "LeetCode",
+      fieldValue: "rifat_islam",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Bangladeshi",
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "muhammad.rifat.islam31@gmail.com",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available",
+    },
+    {
+      fieldName: "Languages",
+      fieldValue: "English, Bangla, Arabic, Urdu",
+    },
+  ],
 };
 
-//experience data
+// Experience data
 const experience = {
-    icon: '/assets/resume/badge.svg',
-    title: 'My experience',
-    description: "dfhj sdhfs jdkrjos fksj fsdkjfjks f",
-    items: [
-        {
-            company: "BanglaFire Solution Limited",
-            position: "Industrial Trainee",
-            duration: "Jan 2023 - Feb 2023",
-        },
-        {
-            company: "MADE EASY: An Online Tution Platform",
-            position: "Co Founder",
-            duration: "Nov 2023 - Present",
-        },
-        {
-            company: "ATI Limited",
-            position: "Python Developer",
-            duration: "Nov 2024 - Present",
-        },
-    ],
+  icon: "/assets/resume/badge.svg",
+  title: "My Experience",
+  description:
+    "Over the years, I have contributed to various innovative projects, gaining expertise in software development, team collaboration, and delivering high-quality solutions. Here’s a summary of my professional journey.",
+  items: [
+    {
+      company: "BanglaFire Solution Limited",
+      position: "Industrial Trainee",
+      duration: "Jan 2023 - Feb 2023",
+    },
+    {
+      company: "MADE EASY: An Online Tuition Platform",
+      position: "Co-Founder",
+      duration: "Nov 2023 - Present",
+    },
+    {
+      company: "ACI Limited",
+      position: "Machine Learning Engineer",
+      duration: "Dec 2024 - Present",
+    },
+  ],
 };
 
-//education data
+// Education data
 const education = {
-    icon: '/assets/resume/cap.svg',
-    title: 'My education',
-    description: "dfhj sdhfs jdkrjos fksj fsdkjfjks f",
-    items: [
-        {
-            institution: "Military Institute of Science & Technology",
-            degree: "Bachelor in Science: CSE",
-            duration: "Jan 2020 - Apr 2024",
-        },
-        {
-            institution: "New Govt. Degree College, Rajshahi",
-            degree: "Higher Secondary School Certificate",
-            duration: "May 2017 - Jun 2019",
-        },
-        {
-            institution: "Seroil Govt. High School, Rajshahi",
-            degree: "Seconday School certificate",
-            duration: "Jan 2012 - Mar 2017",
-        },
-    ],
+  icon: "/assets/resume/cap.svg",
+  title: "My Education",
+  description:
+    "My educational background has equipped me with a strong foundation in computer science, enabling me to tackle complex technical challenges and develop innovative solutions.",
+  items: [
+    {
+      institution: "Military Institute of Science & Technology",
+      degree: "Bachelor in Science: CSE",
+      duration: "Jan 2020 - Apr 2024",
+    },
+    {
+      institution: "New Govt. Degree College, Rajshahi",
+      degree: "Higher Secondary School Certificate",
+      duration: "May 2017 - Jun 2019",
+    },
+    {
+      institution: "Seroil Govt. High School, Rajshahi",
+      degree: "Secondary School Certificate",
+      duration: "Jan 2012 - Mar 2017",
+    },
+  ],
 };
 
-//skills data
+// Skills data
 const skills = {
-    title: "My skills",
-    description: "A summary of my technical skills and technologies I&apos;m proficient in.",
-    skillList: [
-      {
-        icon: <FaPython />,
-        name: "Python",
-      },
-      {
-        icon: <SiFlutter />,
-        name: "Flutter",
-      },
-      {
-        icon: <SiCplusplus />,
-        name: "C++",
-      },
-      {
-        icon: <SiOracle />,
-        name: "Oracle",
-      },
-      {
-        icon: <SiDjango />,
-        name: "Django",
-      },
-      {
-        icon: <SiTensorflow />,
-        name: "AI (TensorFlow)",
-      },
-      {
-        icon: <SiScikitlearn />,
-        name: "ML (scikit-learn)",
-      },
-      {
-        icon: <FaHtml5 />,
-        name: "HTML5",
-      },
-      {
-        icon: <FaReact />,
-        name: "React.js",
-      },
-      {
-        icon: <SiNextdotjs />,
-        name: "Next.js",
-      },
-      {
-        icon: <SiTailwindcss />,
-        name: "Tailwind CSS",
-      },
-      {
-        icon: <FaNodeJs />,
-        name: "Node.js",
-      },
-      {
-        icon: <FaFigma />,
-        name: "Figma",
-      },
-    ],
-  };
+  title: "My Skills",
+  description:
+    "A comprehensive summary of the technical tools and frameworks I specialize in, which have been pivotal in building innovative solutions.",
+  skillList: [
+    {
+      icon: <FaPython />,
+      name: "Python",
+    },
+    {
+      icon: <SiFlutter />,
+      name: "Flutter",
+    },
+    {
+      icon: <SiCplusplus />,
+      name: "C++",
+    },
+    {
+      icon: <SiOracle />,
+      name: "Oracle",
+    },
+    {
+      icon: <SiDjango />,
+      name: "Django",
+    },
+    {
+      icon: <SiTensorflow />,
+      name: "AI (TensorFlow)",
+    },
+    {
+      icon: <SiScikitlearn />,
+      name: "ML (scikit-learn)",
+    },
+    {
+      icon: <FaHtml5 />,
+      name: "HTML5",
+    },
+    {
+      icon: <FaReact />,
+      name: "React.js",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "Next.js",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "Node.js",
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma",
+    },
+  ],
+};
 
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-    Tooltip,
-    TooltipContent, 
-    TooltipProvider, 
-    TooltipTrigger, 
-    } from "@/components/ui/tooltip";
-
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Resume = () => {
-    return (
-        <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 1,
-                tansition: {delay: 2.4, duration: 0.4, ease: "easeIn" },
-            }} 
-            className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+    >
+      <div className="container mx-auto">
+        <Tabs
+          defaultValue="experience"
+          className="flex flex-col xl:flex-row gap-[60px]"
         >
-            <div className="container mx-auto">
-                <Tabs 
-                    defaultValue="experience" 
-                    className="flex flex-col xl:flex-row gap-[60px]"
-                >
-                        <TabsList className="flex flex-col w-full max-w-[380px]
-                        mx-auto xl:mx-0 gap-6">
-                            <TabsTrigger value="experience">Experience</TabsTrigger>
-                            <TabsTrigger value="education">Education</TabsTrigger>
-                            <TabsTrigger value="skills">Skills</TabsTrigger>
-                            <TabsTrigger value="about">About Me</TabsTrigger>
-                        </TabsList>
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="about">About Me</TabsTrigger>
+          </TabsList>
 
                     {/* content  */}
                     <div className="min-h-[70vh] w-full ">

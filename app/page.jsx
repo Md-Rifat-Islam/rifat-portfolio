@@ -17,7 +17,7 @@ const Home = () => {
         xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Data Analyst & Software Developer</span>
+            <span className="text-xl">Machine Learning Engineer</span>
             <h1 className="h1">
               Hello I&apos;m <br /><span className="text-accent">Muhammad Rifat Islam</span>
             </h1>
