@@ -36,7 +36,7 @@ const projects = [
         description: "Welcome to my personal portfolio! This project showcases my skills, projects, and professional background. It is built with a focus on clean design, responsive layout, and easy navigation, offering visitors a comprehensive view of my work and expertise.",
         stack: [{name: "Next.js"}, {name: "React JS"}, {name: "Html5"}, {name: "Css3"}, {name: "JavaScript"}, {name: "BootStrap"}],
         image: "/assets/work/thumb2.png",
-        live: "https://rifat-portfolio-q8tz-3g5zlixjr-muhammad-rifat-islams-projects.vercel.app/",
+        live: "https://rifat-portfolio-2jvt.vercel.app/",
         github: "https://github.com/Md-Rifat-Islam/rifat-portfolio",
     },
     {
