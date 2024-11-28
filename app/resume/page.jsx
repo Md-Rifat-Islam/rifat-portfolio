@@ -111,7 +111,7 @@ const education = {
 //skills data
 const skills = {
     title: "My skills",
-    description: "A summary of my technical skills and technologies I'm proficient in.",
+    description: "A summary of my technical skills and technologies I&apos;m proficient in.",
     skillList: [
       {
         icon: <FaPython />,
