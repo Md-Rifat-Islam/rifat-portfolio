@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -18,190 +17,228 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
+// PROJECT DATA
 const projects = [
-    {
-        num: '01',
-        category: "Salam_with-Islam : Frontend",
-        title: "project 1",
-        description: "Salam with Islam is an educational website designed to promote knowledge and understanding of Islam. Created as a project for the CSE 224 Web Development course, this website provides valuable resources on Islamic teachings, daily practices, and core values, presented in a user-friendly format to engage users of all ages and backgrounds.",
-        stack: [{name: "Html5"}, {name: "Css3"}, {name: "JavaScript"}, {name: "BootStrap"}],
-        image: "/assets/work/thumb1.png",
-        live: "https://md-rifat-islam.github.io/Salam_with-Islam/",
-        github: "https://github.com/Md-Rifat-Islam/Salam_with-Islam",
-    },
-    {
-        num: '02',
-        category: "rifat-portfolio : Frontend",
-        title: "project 2",
-        description: "Welcome to my personal portfolio! This project showcases my skills, projects, and professional background. It is built with a focus on clean design, responsive layout, and easy navigation, offering visitors a comprehensive view of my work and expertise.",
-        stack: [{name: "Next.js"}, {name: "React JS"}, {name: "Html5"}, {name: "Css3"}, {name: "JavaScript"}, {name: "BootStrap"}],
-        image: "/assets/work/thumb2.png",
-        live: "https://rifat-portfolio-2jvt.vercel.app/",
-        github: "https://github.com/Md-Rifat-Islam/rifat-portfolio",
-    },
-    {
-        num: '03',
-        category: "Health-AI : Flutter",
-        title: "project 3",
-        description: "An AI Based Healthcare Application System (Personal Healthcare Companion app); Features: \n 1. Health AI Chatbot \n 2. Doctor Suggestion Module \n 3. Cure Suggestion Module \n 4. Health Analytics Module \n 5. SOS Module",
-        stack: [{name: "Flutter"}, {name: "Microsoft Azure"}, {name: "Firebase"}, {name: "MVC"}, {name: "Dart"}],
-        image: "/assets/work/thumb3.png",
-        live: "https://lnkd.in/gmRtcERr",
-        github: "https://github.com/Md-Rifat-Islam/Health-AI",
-    },
-    {
-        num: '04',
-        category: "Diabetes_Patient_Pre-screening_Chatbot : ML ",
-        title: "project 4",
-        description: "Diabetes is a prevalent health issue, especially in Bangladesh, putting strain on healthcare resources. This project introduces a comprehensive solution integrating a chatbot and sensors to aid in diabetes patient pre-screening. The chatbot interacts with patients to gather essential data like lifestyle, symptoms, and medical history, while sensors measure vital signs such as body temperature, heart rate, and oxygen levels. The collected data is displayed in a user-friendly format for healthcare providers, facilitating quicker and more informed consultations.",
-        stack: [{name: "Machine Learning"}, {name: "Tensorflow"}, {name: "Hardware"}, {name: "Raspberry-Pi"}, {name: "Selfmade Dataset"}],
-        image: "/assets/work/thumb4.png",
-        live: "",
-        github: "https://github.com/Md-Rifat-Islam/Diabetes_Patient_Pre-screening_Chatbot",
-    },
-    {
-        num: '05',
-        category: "YouTube-News-Video-Textual-Summarization-using-T5-and-SpaCy : ML ",
-        title: "project 5",
-        description: "This project develops two system pipelines to summarize any YouTube news video using only the video link as input. It also conducts a comparison between two summarization techniques — Abstractive Summarization using Google T5 and Extractive Summarization using SpaCy — evaluated with ROUGE scores.",
-        stack: [{name: "Machine Learning"}, {name: "Google T5"}, {name: "SpaCy"}, {name: "ROUGE Score"}, {name: "NLP"}],
-        image: "/assets/work/no_thumb.png",
-        live: "",
-        github: "https://github.com/Md-Rifat-Islam/YouTube-News-Video-Textual-Summarization-using-T5-and-SpaCy",
-    },
-    {
-        num: '06',
-        category: "To-Do List and Sensor Tracking App : Flutter ",
-        title: "project 6",
-        description: "This Flutter application consists of two main features: a To-Do List manager and a Sensor Tracking module. The app allows users to create, manage, and track tasks, as well as monitor real-time data from device sensors.",
-        stack: [{name: "Flutter"}, {name: "Sensors"}, {name: "Mobile Storage"}],
-        image: "/assets/work/thumb6.png",
-        live: "",
-        github: "https://github.com/Md-Rifat-Islam/To-Do-List-and-Sensor-Tracking-App-Flutter-",
-    },
-    {
-        num: '07',
-        category: "TCB-Goods-Distribution-System : Database  ",
-        title: "project 7",
-        description: "The TCB Goods Distribution System is a web-based application designed to streamline and manage the distribution of essential goods by the Trading Corporation of Bangladesh (TCB). The system aims to make the distribution process more transparent, efficient, and accessible for both administrators and beneficiaries.",
-        stack: [{name: "ORACLE"}, {name: "SQL"}, {name: "HTML"}, {name: "CSS"}, {name: "Bootstrap"}],
-        image: "/assets/work/no_thumb.png",
-        live: "",
-        github: "https://github.com/Md-Rifat-Islam/TCB-Goods-Distribution-System",
-    },
+  {
+    num: "01",
+    category: "Salam_with-Islam : Frontend",
+    title: "Salam with Islam",
+    description:
+      "An educational website designed to promote Islamic knowledge and understanding. Built as part of my Web Development course, it delivers structured content with responsive UI and accessibility in mind.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "JavaScript" },
+      { name: "Bootstrap" },
+    ],
+    image: "/assets/work/thumb1.png",
+    live: "https://md-rifat-islam.github.io/Salam_with-Islam/",
+    github: "https://github.com/Md-Rifat-Islam/Salam_with-Islam",
+  },
+  {
+    num: "02",
+    category: "rifat-portfolio : Frontend",
+    title: "Personal Portfolio",
+    description:
+      "A sleek portfolio showcasing my projects, skills, and experience. Developed with Next.js and React, featuring smooth animations, responsive design, and SEO optimization.",
+    stack: [
+      { name: "Next.js" },
+      { name: "React.js" },
+      { name: "Tailwind CSS" },
+      { name: "JavaScript" },
+    ],
+    image: "/assets/work/thumb2.png",
+    live: "https://rifat-portfolio-2jvt.vercel.app/",
+    github: "https://github.com/Md-Rifat-Islam/rifat-portfolio",
+  },
+  {
+    num: "03",
+    category: "Health-AI : Flutter",
+    title: "Health AI App",
+    description:
+      "An AI-powered healthcare app offering personal health tracking, chatbot consultation, and SOS alerts. Integrated Azure AI, Firebase backend, and Flutter’s cross-platform design.",
+    stack: [
+      { name: "Flutter" },
+      { name: "Microsoft Azure" },
+      { name: "Firebase" },
+      { name: "MVC" },
+      { name: "Dart" },
+    ],
+    image: "/assets/work/thumb3.png",
+    live: "https://lnkd.in/gmRtcERr",
+    github: "https://github.com/Md-Rifat-Islam/Health-AI",
+  },
+  {
+    num: "04",
+    category: "Diabetes Chatbot : ML",
+    title: "Diabetes Pre-screening Chatbot",
+    description:
+      "An intelligent chatbot integrated with IoT sensors to assist diabetic patients. Gathers lifestyle data and vitals, providing an initial health assessment for medical professionals.",
+    stack: [
+      { name: "Machine Learning" },
+      { name: "TensorFlow" },
+      { name: "Raspberry Pi" },
+      { name: "Hardware Sensors" },
+    ],
+    image: "/assets/work/thumb4.png",
+    github:
+      "https://github.com/Md-Rifat-Islam/Diabetes_Patient_Pre-screening_Chatbot",
+  },
+  {
+    num: "05",
+    category: "T5 & SpaCy : ML",
+    title: "YouTube News Summarizer",
+    description:
+      "A dual pipeline project summarizing YouTube news videos via Abstractive (T5) and Extractive (SpaCy) models, evaluated using ROUGE metrics for text quality and accuracy.",
+    stack: [
+      { name: "T5" },
+      { name: "SpaCy" },
+      { name: "ROUGE Score" },
+      { name: "NLP" },
+    ],
+    image: "/assets/work/no_thumb.png",
+    github:
+      "https://github.com/Md-Rifat-Islam/YouTube-News-Video-Textual-Summarization-using-T5-and-SpaCy",
+  },
+  {
+    num: "06",
+    category: "To-Do & Sensor : Flutter",
+    title: "Productivity + Sensor Tracker App",
+    description:
+      "A Flutter-based mobile app combining a To-Do List with real-time sensor data tracking. Built with clean architecture, persistent storage, and responsive layouts.",
+    stack: [
+      { name: "Flutter" },
+      { name: "Sensors API" },
+      { name: "SQLite" },
+    ],
+    image: "/assets/work/thumb6.png",
+    github:
+      "https://github.com/Md-Rifat-Islam/To-Do-List-and-Sensor-Tracking-App-Flutter-",
+  },
+  {
+    num: "07",
+    category: "TCB Goods System : Database",
+    title: "TCB Goods Distribution System",
+    description:
+      "An Oracle-based distribution management system to digitize TCB’s essential goods supply chain, improving transparency and efficiency.",
+    stack: [
+      { name: "Oracle" },
+      { name: "SQL" },
+      { name: "HTML" },
+      { name: "Bootstrap" },
+    ],
+    image: "/assets/work/no_thumb.png",
+    github: "https://github.com/Md-Rifat-Islam/TCB-Goods-Distribution-System",
+  },
 ];
 
-
 const Work = () => {
-    const [project, setProject] = useState(projects[0] || {});
-  
-    const handleSlideChange = (swiper) => {
-      const currentIndex = swiper.activeIndex;
-      setProject(projects[currentIndex]);
-    };
-  
-    return (
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-        }}
-        className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
-      >
-        <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row xl:gap-8">
-            {/* Project Details Section */}
-            <div className="w-full xl:w-1/2 flex flex-col gap-6">
-              {/* Project Number */}
-              <div className="text-8xl font-extrabold text-transparent text-outline">
-                {project.num || "N/A"}
-              </div>
-              {/* Project Title */}
-              <h2 className="text-4xl font-bold leading-snug text-white transition-all capitalize">
-                {project.category || "Category"} Project
-              </h2>
-              {/* Project Description */}
-              <p className="text-white/60">{project.description || "No description provided."}</p>
-              {/* Tech Stack */}
-              <ul className="flex flex-wrap gap-2">
-                {project.stack?.map((item, index) => (
-                  <li key={index} className="text-lg text-accent">
-                    {item.name}
-                    {index !== project.stack.length - 1 && ","}
-                  </li>
-                )) || <li>No stack specified.</li>}
-              </ul>
-              <div className="border border-white/20"></div>
-              {/* Action Buttons */}
-              <div className="flex items-center gap-4">
-                {/* Live Button */}
-                {project.live && (
-                  <Link href={project.live} passHref>
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>Live Content</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </Link>
-                )}
-                {/* GitHub Button */}
-                {project.github && (
-                  <Link href={project.github} passHref>
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>GitHub Repository</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </Link>
-                )}
-              </div>
+  const [project, setProject] = useState(projects[0]);
+
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    setProject(projects[currentIndex]);
+  };
+
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 0.3, duration: 0.6, ease: "easeInOut" },
+      }}
+      className="min-h-[90vh] flex flex-col justify-center py-16 bg-gradient-to-b from-[#0f172a] to-[#1e293b]"
+    >
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col xl:flex-row items-start gap-12 xl:gap-16">
+          {/* Project Info */}
+          <div className="w-full xl:w-1/2 flex flex-col gap-6">
+            <div className="text-7xl font-extrabold text-accent/20 select-none">
+              {project.num}
             </div>
-  
-            {/* Swiper Section */}
-            <div className="w-full xl:w-1/2">
-              <Swiper
-                spaceBetween={30}
-                slidesPerView={1}
-                className="xl:h-[520px] mb-12"
-                onSlideChange={handleSlideChange}
-              >
-                {projects.map((project, index) => (
-                  <SwiperSlide key={index} className="relative group flex justify-center items-center bg-pink-50/20">
-                    {/* Image Overlay */}
-                    <div className="absolute inset-0 bg-black/10 z-10"></div>
-                    {/* Project Image */}
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={project.image}
-                        fill
-                        className="object-cover"
-                        alt={`Thumbnail for ${project.category}`}
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-                {/* Slider Buttons */}
-                <WorkSliderBtns
-                  containerStyles="absolute flex gap-2 right-0 bottom-[50%] z-20 w-full xl:w-auto justify-between xl:justify-start"
-                  btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                />
-              </Swiper>
+            <h2 className="text-4xl font-bold text-white leading-tight">
+              {project.title}
+            </h2>
+            <p className="text-white/70 text-lg leading-relaxed">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {project.stack.map((item, index) => (
+                <span
+                  key={index}
+                  className="text-sm px-3 py-1 bg-accent/10 text-accent rounded-full"
+                >
+                  {item.name}
+                </span>
+              ))}
+            </div>
+            <div className="border-b border-white/10 my-4"></div>
+
+            {/* Buttons */}
+            <div className="flex gap-4">
+              {project.live && (
+                <Link href={project.live} target="_blank">
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-accent/10 hover:bg-accent transition-all flex justify-center items-center group">
+                        <BsArrowUpRight className="text-2xl text-accent group-hover:text-white" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live Demo</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              )}
+              {project.github && (
+                <Link href={project.github} target="_blank">
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-accent/10 hover:bg-accent transition-all flex justify-center items-center group">
+                        <BsGithub className="text-2xl text-accent group-hover:text-white" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>GitHub Repository</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              )}
             </div>
           </div>
+
+          {/* Swiper */}
+          <div className="w-full xl:w-1/2 relative">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="xl:h-[520px] rounded-2xl overflow-hidden shadow-xl"
+              onSlideChange={handleSlideChange}
+            >
+              {projects.map((project, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="relative group flex justify-center items-center bg-black/10"
+                >
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10" />
+                  <Image
+                    src={project.image}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-all duration-500"
+                    alt={`Thumbnail of ${project.title}`}
+                  />
+                </SwiperSlide>
+              ))}
+              <WorkSliderBtns
+                containerStyles="absolute right-4 bottom-4 z-20 flex gap-2"
+                btnStyles="bg-accent hover:bg-accent/80 text-white text-lg w-[44px] h-[44px] flex justify-center items-center rounded-full shadow-lg transition-all"
+              />
+            </Swiper>
+          </div>
         </div>
-      </motion.section>
-    );
-  };
-  
-  export default Work;
+      </div>
+    </motion.section>
+  );
+};
+
+export default Work;
