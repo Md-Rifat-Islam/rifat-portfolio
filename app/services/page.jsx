@@ -65,8 +65,7 @@ const services = [
 const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
-      {/* <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0 bg-gradient-to-b"> */}
-        <div className="container mx-auto px-6 mt-10">
+      <div className="container mx-auto px-6 mt-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{
@@ -79,24 +78,24 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center gap-6 group border border-white/10 rounded-2xl p-8 hover:border-accent hover:shadow-xl transition-all duration-500 bg-white/5 backdrop-blur-sm"
+              className="flex flex-col justify-center gap-6 group border border-white/10 rounded-2xl p-8 hover:border-[#06b6d4] hover:shadow-2xl hover:shadow-[#06b6d4]/20 transition-all duration-500 bg-white/5 backdrop-blur-sm"
             >
               {/* Top Section */}
               <div className="w-full flex justify-between items-center">
-                <div className="text-5xl font-extrabold text-accent opacity-90">
+                <div className="text-5xl font-extrabold text-gradient opacity-90 group-hover:opacity-100 transition-all">
                   {service.num}
                 </div>
                 <Link
                   href={service.href}
                   target="_blank"
-                  className="w-[60px] h-[60px] rounded-full bg-accent/10 group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                  className="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-[#06b6d4]/20 to-[#3b82f6]/20 border border-[#06b6d4]/30 group-hover:bg-gradient-to-br group-hover:from-[#06b6d4] group-hover:to-[#3b82f6] transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                 >
-                  <BsArrowUpRight className="text-accent text-2xl group-hover:text-white transition-all" />
+                  <BsArrowUpRight className="text-[#06b6d4] text-2xl group-hover:text-white transition-all" />
                 </Link>
               </div>
 
               {/* Title */}
-              <h2 className="text-[30px] md:text-[34px] font-bold leading-tight text-white group-hover:text-accent transition-all duration-500">
+              <h2 className="text-[30px] md:text-[34px] font-bold leading-tight text-white group-hover:text-gradient transition-all duration-500">
                 {service.title}
               </h2>
 
@@ -105,12 +104,15 @@ const Services = () => {
                 {service.description.split("\n").map((line, i) => (
                   <p
                     key={i}
-                    className="text-base text-white/80 leading-relaxed tracking-wide"
+                    className="text-base text-white/80 leading-relaxed tracking-wide group-hover:text-white/90 transition-all"
                   >
                     {line}
                   </p>
                 ))}
               </div>
+
+              {/* Decorative bottom gradient line */}
+              <div className="w-0 h-1 bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] group-hover:w-full transition-all duration-500 rounded-full"></div>
             </div>
           ))}
         </motion.div>

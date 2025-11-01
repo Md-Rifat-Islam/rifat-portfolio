@@ -15,15 +15,20 @@ const Header = () => {
         opacity: 1,
         transition: { delay: 0.3, duration: 0.6, ease: "easeOut" },
       }}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0f172a]/70 border-b border-white/10"
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0f172a]/80 border-b border-[#06b6d4]/20 shadow-lg"
     >
       <div className="container mx-auto flex justify-between items-center py-6 xl:py-8 text-white">
         {/* Logo */}
-        <Link href="/" className="group">
-          <h1 className="text-4xl xl:text-5xl font-bold tracking-tight transition-all duration-300 group-hover:text-accent">
-            R<span className="text-accent">!</span>fat
-            <span className="text-accent">.</span>
+        <Link href="/" className="group relative">
+          <h1 className="text-4xl xl:text-5xl font-bold tracking-tight transition-all duration-300">
+            <span className="group-hover:text-gradient transition-all">R</span>
+            <span className="text-gradient animate-pulse">!</span>
+            <span className="group-hover:text-gradient transition-all">fat</span>
+            <span className="text-gradient">.</span>
           </h1>
+          
+          {/* Decorative underline on hover */}
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] group-hover:w-full transition-all duration-300"></span>
         </Link>
 
         {/* Desktop Nav & Hire Button */}
@@ -31,7 +36,7 @@ const Header = () => {
           <Nav />
           <Link href="/contact">
             <Button
-              className="bg-accent text-primary hover:bg-accent/80 transition-all duration-300"
+              className="bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] text-white hover:from-[#0891b2] hover:to-[#2563eb] transition-all duration-300 shadow-lg hover:shadow-[#06b6d4]/50 hover:scale-105 border-none"
               size="lg"
             >
               Hire Me

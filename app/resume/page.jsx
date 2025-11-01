@@ -38,7 +38,7 @@ const about = {
   title: "About Me",
   description: `I'm Muhammad Rifat Islam — a Software Developer and AI Engineer passionate about building intelligent, scalable systems that make a real-world impact. 
   I specialize in AI/ML model development, full-stack web solutions (React, Next.js, Django), and Flutter-based cross-platform apps. 
-  I’m also a published researcher and educator, driven by curiosity, clarity, and innovation.`,
+  I'm also a published researcher and educator, driven by curiosity, clarity, and innovation.`,
   info: [
     { fieldName: "Name", fieldValue: "Muhammad Rifat Islam" },
     { fieldName: "Phone", fieldValue: "(+880) 1728-977294" },
@@ -56,7 +56,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "I’ve worked across AI research, web app development, and leadership — combining technical expertise with strategic execution to deliver real results.",
+    "I've worked across AI research, web app development, and leadership — combining technical expertise with strategic execution to deliver real results.",
   items: [
     {
       company: "AIDE Private Limited",
@@ -147,10 +147,30 @@ const Resume = () => {
         >
           {/* Tab Buttons */}
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 bg-transparent">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About Me</TabsTrigger>
+            <TabsTrigger 
+              value="experience"
+              className="bg-white/5 border border-white/10 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#06b6d4] data-[state=active]:to-[#3b82f6] data-[state=active]:text-white hover:border-[#06b6d4] transition-all"
+            >
+              Experience
+            </TabsTrigger>
+            <TabsTrigger 
+              value="education"
+              className="bg-white/5 border border-white/10 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#06b6d4] data-[state=active]:to-[#3b82f6] data-[state=active]:text-white hover:border-[#06b6d4] transition-all"
+            >
+              Education
+            </TabsTrigger>
+            <TabsTrigger 
+              value="skills"
+              className="bg-white/5 border border-white/10 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#06b6d4] data-[state=active]:to-[#3b82f6] data-[state=active]:text-white hover:border-[#06b6d4] transition-all"
+            >
+              Skills
+            </TabsTrigger>
+            <TabsTrigger 
+              value="about"
+              className="bg-white/5 border border-white/10 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#06b6d4] data-[state=active]:to-[#3b82f6] data-[state=active]:text-white hover:border-[#06b6d4] transition-all"
+            >
+              About Me
+            </TabsTrigger>
           </TabsList>
 
           {/* Tab Contents */}
@@ -158,8 +178,8 @@ const Resume = () => {
             {/* Experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold text-accent">
-                  {experience.title}
+                <h3 className="text-4xl font-bold">
+                  <span className="text-gradient">{experience.title}</span>
                 </h3>
                 <p className="max-w-[600px] text-white/70 mx-auto xl:mx-0">
                   {experience.description}
@@ -170,12 +190,12 @@ const Resume = () => {
                       <li
                         key={index}
                         className="bg-white/5 backdrop-blur-sm h-[184px] py-6 px-8 rounded-xl
-                        flex flex-col justify-center items-center lg:items-start gap-1 border border-white/10 hover:border-accent transition-all"
+                        flex flex-col justify-center items-center lg:items-start gap-1 border border-white/10 hover:border-[#06b6d4] hover:bg-white/10 transition-all duration-300 group"
                       >
-                        <span className="text-accent text-sm">
+                        <span className="text-[#06b6d4] text-sm font-semibold">
                           {item.duration}
                         </span>
-                        <h3 className="text-xl font-semibold max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="text-xl font-semibold max-w-[260px] min-h-[60px] text-center lg:text-left group-hover:text-gradient transition-all">
                           {item.position}
                         </h3>
                         <p className="text-white/60">{item.company}</p>
@@ -189,8 +209,8 @@ const Resume = () => {
             {/* Education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold text-accent">
-                  {education.title}
+                <h3 className="text-4xl font-bold">
+                  <span className="text-gradient">{education.title}</span>
                 </h3>
                 <p className="max-w-[600px] text-white/70 mx-auto xl:mx-0">
                   {education.description}
@@ -201,12 +221,12 @@ const Resume = () => {
                       <li
                         key={index}
                         className="bg-white/5 backdrop-blur-sm h-[184px] py-6 px-8 rounded-xl
-                        flex flex-col justify-center items-center lg:items-start gap-1 border border-white/10 hover:border-accent transition-all"
+                        flex flex-col justify-center items-center lg:items-start gap-1 border border-white/10 hover:border-[#06b6d4] hover:bg-white/10 transition-all duration-300 group"
                       >
-                        <span className="text-accent text-sm">
+                        <span className="text-[#06b6d4] text-sm font-semibold">
                           {item.duration}
                         </span>
-                        <h3 className="text-xl font-semibold max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="text-xl font-semibold max-w-[260px] min-h-[60px] text-center lg:text-left group-hover:text-gradient transition-all">
                           {item.degree}
                         </h3>
                         <p className="text-white/60">{item.institution}</p>
@@ -220,7 +240,9 @@ const Resume = () => {
             {/* Skills */}
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold text-accent">{skills.title}</h3>
+                <h3 className="text-4xl font-bold">
+                  <span className="text-gradient">{skills.title}</span>
+                </h3>
                 <p className="max-w-[600px] text-white/70 mx-auto xl:mx-0">
                   {skills.description}
                 </p>
@@ -229,13 +251,13 @@ const Resume = () => {
                     <li key={index}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-white/5 border border-white/10 rounded-xl flex justify-center items-center group hover:border-accent hover:bg-white/10 transition-all duration-300">
-                            <div className="text-5xl group-hover:text-accent transition-all duration-300">
+                          <TooltipTrigger className="w-full h-[150px] bg-white/5 border border-white/10 rounded-xl flex justify-center items-center group hover:border-[#06b6d4] hover:bg-gradient-to-br hover:from-[#06b6d4]/10 hover:to-[#3b82f6]/10 transition-all duration-300">
+                            <div className="text-5xl text-white/70 group-hover:text-gradient transition-all duration-300">
                               {skill.icon}
                             </div>
                           </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
+                          <TooltipContent className="bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] border-none">
+                            <p className="capitalize text-white">{skill.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -248,7 +270,9 @@ const Resume = () => {
             {/* About */}
             <TabsContent value="about" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold text-accent">{about.title}</h3>
+                <h3 className="text-4xl font-bold">
+                  <span className="text-gradient">{about.title}</span>
+                </h3>
                 <p className="max-w-[700px] text-white/70 mx-auto xl:mx-0 leading-relaxed">
                   {about.description}
                 </p>
@@ -256,10 +280,10 @@ const Resume = () => {
                   {about.info.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-center justify-center xl:justify-start gap-4"
+                      className="flex items-center justify-center xl:justify-start gap-4 group"
                     >
                       <span className="text-white/60">{item.fieldName}:</span>
-                      <span className="text-lg font-medium text-white">
+                      <span className="text-lg font-medium text-white group-hover:text-gradient transition-all">
                         {item.fieldValue}
                       </span>
                     </li>

@@ -56,7 +56,7 @@ const projects = [
     category: "Health-AI : Flutter",
     title: "Health AI App",
     description:
-      "An AI-powered healthcare app offering personal health tracking, chatbot consultation, and SOS alerts. Integrated Azure AI, Firebase backend, and Flutter’s cross-platform design.",
+      "An AI-powered healthcare app offering personal health tracking, chatbot consultation, and SOS alerts. Integrated Azure AI, Firebase backend, and Flutter's cross-platform design.",
     stack: [
       { name: "Flutter" },
       { name: "Microsoft Azure" },
@@ -120,7 +120,7 @@ const projects = [
     category: "TCB Goods System : Database",
     title: "TCB Goods Distribution System",
     description:
-      "An Oracle-based distribution management system to digitize TCB’s essential goods supply chain, improving transparency and efficiency.",
+      "An Oracle-based distribution management system to digitize TCB's essential goods supply chain, improving transparency and efficiency.",
     stack: [
       { name: "Oracle" },
       { name: "SQL" },
@@ -153,10 +153,10 @@ const Work = () => {
         <div className="flex flex-col xl:flex-row items-start gap-12 xl:gap-16">
           {/* Project Info */}
           <div className="w-full xl:w-1/2 flex flex-col gap-6">
-            <div className="text-7xl font-extrabold text-accent/20 select-none">
+            <div className="text-7xl font-extrabold text-gradient opacity-30 select-none">
               {project.num}
             </div>
-            <h2 className="text-4xl font-bold text-white leading-tight">
+            <h2 className="text-4xl font-bold text-gradient leading-tight">
               {project.title}
             </h2>
             <p className="text-white/70 text-lg leading-relaxed">
@@ -166,7 +166,7 @@ const Work = () => {
               {project.stack.map((item, index) => (
                 <span
                   key={index}
-                  className="text-sm px-3 py-1 bg-accent/10 text-accent rounded-full"
+                  className="text-sm px-3 py-1 bg-gradient-to-r from-[#06b6d4]/20 to-[#3b82f6]/20 text-[#06b6d4] border border-[#06b6d4]/30 rounded-full hover:from-[#06b6d4]/30 hover:to-[#3b82f6]/30 hover:border-[#06b6d4]/50 transition-all"
                 >
                   {item.name}
                 </span>
@@ -180,11 +180,11 @@ const Work = () => {
                 <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-accent/10 hover:bg-accent transition-all flex justify-center items-center group">
-                        <BsArrowUpRight className="text-2xl text-accent group-hover:text-white" />
+                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-[#06b6d4]/20 to-[#3b82f6]/20 border border-[#06b6d4]/30 hover:bg-gradient-to-br hover:from-[#06b6d4] hover:to-[#3b82f6] hover:border-transparent transition-all flex justify-center items-center group">
+                        <BsArrowUpRight className="text-2xl text-[#06b6d4] group-hover:text-white transition-all" />
                       </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Demo</p>
+                      <TooltipContent className="bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] border-none">
+                        <p className="text-white">Live Demo</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -194,11 +194,11 @@ const Work = () => {
                 <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-accent/10 hover:bg-accent transition-all flex justify-center items-center group">
-                        <BsGithub className="text-2xl text-accent group-hover:text-white" />
+                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-[#06b6d4]/20 to-[#3b82f6]/20 border border-[#06b6d4]/30 hover:bg-gradient-to-br hover:from-[#06b6d4] hover:to-[#3b82f6] hover:border-transparent transition-all flex justify-center items-center group">
+                        <BsGithub className="text-2xl text-[#06b6d4] group-hover:text-white transition-all" />
                       </TooltipTrigger>
-                      <TooltipContent>
-                        <p>GitHub Repository</p>
+                      <TooltipContent className="bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] border-none">
+                        <p className="text-white">GitHub Repository</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -212,7 +212,7 @@ const Work = () => {
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520px] rounded-2xl overflow-hidden shadow-xl"
+              className="xl:h-[520px] rounded-2xl overflow-hidden shadow-xl shadow-[#06b6d4]/10 border border-white/10"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => (
@@ -220,7 +220,7 @@ const Work = () => {
                   key={index}
                   className="relative group flex justify-center items-center bg-black/10"
                 >
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06b6d4]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 z-10" />
                   <Image
                     src={project.image}
                     fill
@@ -231,7 +231,7 @@ const Work = () => {
               ))}
               <WorkSliderBtns
                 containerStyles="absolute right-4 bottom-4 z-20 flex gap-2"
-                btnStyles="bg-accent hover:bg-accent/80 text-white text-lg w-[44px] h-[44px] flex justify-center items-center rounded-full shadow-lg transition-all"
+                btnStyles="bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] hover:from-[#0891b2] hover:to-[#2563eb] text-white text-lg w-[44px] h-[44px] flex justify-center items-center rounded-full shadow-lg hover:shadow-[#06b6d4]/50 transition-all"
               />
             </Swiper>
           </div>
