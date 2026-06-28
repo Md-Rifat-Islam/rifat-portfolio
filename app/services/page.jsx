@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { FaTimes, FaRobot, FaCode, FaMobileAlt, FaLightbulb, FaUsers, FaExpand } from "react-icons/fa";
+import { FaTimes, FaRobot, FaCode, FaMobileAlt, FaLightbulb, FaUsers, FaExpand, FaLaptopCode } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { createPortal } from "react-dom";
@@ -10,83 +10,83 @@ import { createPortal } from "react-dom";
 const services = [
   {
     num: "01",
-    title: "AI & Machine Learning Engineering",
-    shortDesc: "Transforming research into production-ready AI systems using NLP and Deep Learning.",
-    description: `I design and deploy intelligent systems that bridge the gap between academic research and real-world application. As a Microsoft for Startups founder, I specialize in building scalable AI architectures.`,
-    icon: <FaRobot />,
+    title: "Backend & API Development",
+    shortDesc: "Building secure, scalable backends and REST APIs with Python and Django.",
+    description: `I design and build backend systems for production SaaS-style applications — currently shipping an enterprise billing system at DECO Limited, and previously an ERP and B2B marketplace at Taxsense IT Limited.`,
+    icon: <FaCode />,
     color: "#06b6d4",
     features: [
-      { icon: <FaRobot />, title: "NLP & LLMs", text: "Advanced Natural Language Processing using HuggingFace, BERT, and GPT models." },
-      { icon: <FaLightbulb />, title: "RAG & Prompting", text: "Building intelligent retrieval systems and optimized prompt engineering pipelines." },
-      { icon: <FaCode />, title: "Model Development", text: "Training and fine-tuning models with TensorFlow, PyTorch, and Keras." },
-      { icon: <FaUsers />, title: "Health AI", text: "Expertise in AI-driven healthcare companions and interactive patient chatbots." }
+      { icon: <FaCode />, title: "REST APIs", text: "Designing and securing REST APIs with Django REST Framework and JWT authentication." },
+      { icon: <FaLightbulb />, title: "Database Architecture", text: "Designing normalized, optimized schemas for PostgreSQL and MySQL." },
+      { icon: <FaRobot />, title: "Production Systems", text: "Shipping and maintaining billing, ERP, and marketplace backends." },
+      { icon: <FaUsers />, title: "Agile Delivery", text: "Working in code reviews, CI/CD workflows, and agile sprints." },
     ],
-    technologies: ["TensorFlow", "PyTorch", "OpenAI", "LangChain", "Azure AI", "HuggingFace", "Python", "NLP"],
+    technologies: ["Python", "Django", "Django REST Framework", "PostgreSQL", "MySQL", "JWT", "Docker", "Git"],
     href: "https://github.com/Md-Rifat-Islam",
   },
   {
     num: "02",
     title: "Full Stack Web Development",
-    shortDesc: "Building scalable ERP, E-commerce, and EdTech platforms with modern stacks.",
-    description: `I build robust, high-performance web applications tailored for complex business needs. My experience ranges from education technology at MADE EASY to financial ERP systems at Taxsense.`,
-    icon: <FaCode />,
+    shortDesc: "Building React/Next.js frontends on top of Django backends for real business needs.",
+    description: `I build complete web applications end-to-end — from React/Next.js interfaces to Django backends — for ERP, billing, and EdTech platforms.`,
+    icon: <FaLaptopCode />,
     color: "#3b82f6",
     features: [
-      { icon: <FaCode />, title: "Modern Frontend", text: "Crafting dynamic, responsive UIs using Next.js, React, and Tailwind CSS." },
-      { icon: <FaRobot />, title: "Scalable Backends", text: "Developing secure REST & WebSocket APIs with Django and Node.js." },
-      { icon: <FaLightbulb />, title: "Database Architecture", text: "Designing optimized data schemas for PostgreSQL and MySQL." },
-      { icon: <FaUsers />, title: "Agile Development", text: "Implementing agile methodologies to ensure rapid, iterative delivery." }
+      { icon: <FaCode />, title: "Modern Frontend", text: "Building responsive UIs with React.js, Next.js, and Tailwind CSS." },
+      { icon: <FaRobot />, title: "Full Stack Integration", text: "Connecting React/Next.js frontends to Django REST APIs." },
+      { icon: <FaLightbulb />, title: "Real-Time Dashboards", text: "Implementing live dashboard modules for billing and ERP data." },
+      { icon: <FaUsers />, title: "Agile Development", text: "Delivering iteratively in cross-functional, agile teams." },
     ],
-    technologies: ["Next.js", "React.js", "Django", "PostgreSQL", "Tailwind CSS", "REST API", "Node.js", "TypeScript"],
+    technologies: ["Next.js", "React.js", "Django", "PostgreSQL", "Tailwind CSS", "REST API", "TypeScript"],
     href: "https://github.com/Md-Rifat-Islam",
   },
   {
     num: "03",
-    title: "Flutter & Cross-Platform Development",
-    shortDesc: "Developing intuitive mobile-first experiences with Flutter and IoT integration.",
-    description: `I build high-performance, cross-platform mobile apps. My focus is on creating smooth, native-like experiences that integrate seamlessly with cloud services and hardware.`,
+    title: "Mobile App Development",
+    shortDesc: "Building cross-platform mobile apps with Flutter, integrated with REST APIs and Firebase.",
+    description: `I build cross-platform mobile apps focused on clean UI and reliable API integration — including the WHO Log Book app and an IoT-integrated healthcare companion.`,
     icon: <FaMobileAlt />,
     color: "#8b5cf6",
     features: [
-      { icon: <FaMobileAlt />, title: "Mobile UI/UX", text: "Creating beautiful, high-performance interfaces for Android and iOS." },
-      { icon: <FaCode />, title: "State Management", text: "Implementing scalable state management using Bloc, Provider, or GetX." },
-      { icon: <FaLightbulb />, title: "IoT & Firebase", text: "Integrating real-time hardware sensors and Firebase backend services." },
-      { icon: <FaUsers />, title: "App Lead", text: "Leading mobile dev sprints to deliver reliable, production-grade applications." }
+      { icon: <FaMobileAlt />, title: "Mobile UI/UX", text: "Building responsive, native-feeling interfaces in Flutter." },
+      { icon: <FaCode />, title: "API Integration", text: "Connecting mobile apps to REST APIs with structured state management." },
+      { icon: <FaLightbulb />, title: "IoT & Firebase", text: "Integrating hardware sensors (ESP32) and Firebase backend services." },
+      { icon: <FaUsers />, title: "Access Control", text: "Implementing role-based, multi-tier approval workflows." },
     ],
-    technologies: ["Flutter", "Dart", "Firebase", "REST API", "IoT", "SQLite", "Bloc", "Provider"],
+    technologies: ["Flutter", "Dart", "Firebase", "REST API", "IoT", "ESP32"],
     href: "https://github.com/Md-Rifat-Islam",
   },
   {
     num: "04",
-    title: "AI Research & Academic Writing",
-    shortDesc: "Published researcher with expertise in NLP, ROUGE analysis, and Data Science.",
-    description: `I combine academic rigor with technical execution. With multiple publications in IEEE and ACM conferences, I help bring state-of-the-art innovations to life.`,
+    title: "AI Research & Technical Writing",
+    shortDesc: "Published researcher in NLP and healthcare AI, with ROUGE-based evaluation work.",
+    description: `I combine academic rigor with technical execution — three publications in IEEE/ACM venues, including a Best Paper Award, on NLP and AI-driven healthcare systems.`,
     icon: <FaLightbulb />,
     color: "#f59e0b",
     features: [
-      { icon: <FaLightbulb />, title: "Published Papers", text: "Authored 4+ research papers on AI-NLP and Healthcare monitoring." },
-      { icon: <FaCode />, title: "Metrics Analysis", text: "In-depth analysis of AI models using ROUGE scores and SpaCy vs T5." },
-      { icon: <FaRobot />, title: "Award Winning", text: "Recipient of the Best Paper Award at ICISET 2024 for Data Science." },
-      { icon: <FaUsers />, title: "Technical Content", text: "Translating complex AI concepts into clear, academic and technical documentation." }
+      { icon: <FaLightbulb />, title: "Published Papers", text: "Three publications in IEEE (ICISET, ICCIT) and ACM (ICCA) venues." },
+      { icon: <FaCode />, title: "Metrics Analysis", text: "Comparative evaluation of T5 and SpaCy using ROUGE metrics." },
+      { icon: <FaRobot />, title: "Award-Winning Work", text: "Best Paper Award, ICISET 2024, Data Science Track." },
+      { icon: <FaUsers />, title: "Technical Writing", text: "Translating AI concepts into clear academic and technical documentation." },
     ],
-    technologies: ["IEEE", "ACM", "Research Design", "Data Analysis", "NLP Summarization", "Generative AI"],
+    technologies: ["TensorFlow", "Keras", "IEEE", "ACM", "ROUGE", "NLP", "Python"],
     href: "https://scholar.google.com/",
   },
   {
     num: "05",
-    title: "Technical Leadership & Management",
-    shortDesc: "Leading engineering teams and managing academic operations for tech ventures.",
-    description: `As an Executive Director and Team Lead, I manage both the technical vision and the human element to ensure project success.`,
+    title: "Technical Instruction & Team Leadership",
+    shortDesc: "Teaching Algorithms and AI, and coordinating small technical teams.",
+    description: `As an Instructor and Executive at MADE EASY Limited, I manage both the technical curriculum and the people delivering it — alongside leading capstone projects and small dev teams.`,
     icon: <FaUsers />,
     color: "#10b981",
     features: [
-      { icon: <FaUsers />, title: "Team Leadership", text: "Coordinating agile teams at AIDE and Taxsense to deliver scalable software." },
-      { icon: <FaLightbulb />, title: "Academic Ops", text: "Managing academic operations and developer teams at MADE EASY Limited." },
-      { icon: <FaCode />, title: "Code Excellence", text: "Driving high standards through code reviews and structured documentation." },
-      { icon: <FaRobot />, title: "Mentorship", text: "Mentoring junior developers and students in CSE and software engineering." }
+      { icon: <FaUsers />, title: "Technical Instruction", text: "Teaching Data Structures, Algorithms, OOP, and AI." },
+      { icon: <FaLightbulb />, title: "Academic Operations", text: "Managing Class 6–10 routine planning and curriculum design." },
+      { icon: <FaCode />, title: "Capstone Supervision", text: "Supervising student projects in AI and full-stack development." },
+      { icon: <FaRobot />, title: "Mentorship", text: "Mentoring junior developers and coordinating small technical teams." },
     ],
-    technologies: ["Agile", "Team Management", "Sprint Planning", "Jira", "Technical Strategy", "Mentorship"],
-    href: "https://www.linkedin.com/in/muhammad-rifat-islam/",
+    technologies: ["Agile", "Curriculum Design", "Mentorship", "Sprint Planning", "Technical Strategy"],
+    href: "https://www.linkedin.com/in/muhammad-rifat-islam-9ab376230/",
   },
 ];
 
@@ -101,171 +101,97 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
           onClick={onClose}
         >
           <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+            initial={{ scale: 0.96, opacity: 0, y: 12 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-2xl border border-white/20 shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            exit={{ scale: 0.96, opacity: 0, y: 12 }}
+            transition={{ type: "spring", damping: 28, stiffness: 320 }}
+            className="bg-[#10182b] rounded-xl border border-white/10 shadow-2xl max-w-3xl w-full max-h-[88vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div 
-              className="p-6 relative"
-              style={{
-                background: `linear-gradient(135deg, ${service.color}20, ${service.color}40)`
-              }}
-            >
+            <div className="p-6 border-b border-white/10 relative">
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 text-white hover:bg-white/20 rounded-full p-2 transition-all"
+                className="absolute top-5 right-5 text-white/60 hover:text-white transition-colors"
               >
-                <FaTimes size={20} />
+                <FaTimes size={18} />
               </button>
               <div className="flex items-center gap-4 mb-3">
-                <motion.div
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ delay: 0.2, type: "spring" }}
-                  className="text-5xl"
-                  style={{ color: service.color }}
-                >
+                <div className="text-3xl" style={{ color: service.color }}>
                   {service.icon}
-                </motion.div>
+                </div>
                 <div>
-                  <span className="text-white/60 text-sm font-semibold">{service.num}</span>
-                  <h2 className="text-3xl font-bold text-white">{service.title}</h2>
+                  <span className="text-white/40 text-sm">{service.num}</span>
+                  <h2 className="text-2xl font-semibold text-white">{service.title}</h2>
                 </div>
               </div>
-              <p className="text-white/80 text-lg">{service.description}</p>
+              <p className="text-white/70">{service.description}</p>
             </div>
 
             {/* Content */}
-            <ScrollArea className="h-[calc(90vh-350px)] p-6">
+            <ScrollArea className="h-[calc(88vh-320px)] p-6">
               <div className="space-y-6">
                 {/* Features Grid */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{ color: service.color }}>
-                    Key Features & Capabilities
+                  <h3 className="text-sm font-semibold mb-3 uppercase tracking-wide text-white/50">
+                    Key Capabilities
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {service.features.map((feature, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:shadow-lg transition-all duration-300 group"
-                        style={{
-                          borderColor: `${service.color}20`,
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.borderColor = service.color;
-                          e.currentTarget.style.boxShadow = `0 10px 30px ${service.color}30`;
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.borderColor = `${service.color}20`;
-                          e.currentTarget.style.boxShadow = 'none';
-                        }}
+                        className="bg-white/[0.03] rounded-lg p-4 border border-white/10"
                       >
                         <div className="flex items-start gap-3">
-                          <motion.div
-                            whileHover={{ scale: 1.2, rotate: 10 }}
-                            className="text-2xl mt-1 transition-colors"
-                            style={{ color: service.color }}
-                          >
+                          <div className="text-lg mt-0.5" style={{ color: service.color }}>
                             {feature.icon}
-                          </motion.div>
+                          </div>
                           <div className="flex-1">
-                            <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
-                            <p className="text-white/70 text-sm leading-relaxed">{feature.text}</p>
+                            <h4 className="font-medium text-white text-sm mb-1">{feature.title}</h4>
+                            <p className="text-white/60 text-sm leading-relaxed">{feature.text}</p>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Technologies */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{ color: service.color }}>
+                  <h3 className="text-sm font-semibold mb-3 uppercase tracking-wide text-white/50">
                     Technologies & Tools
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, index) => (
-                      <motion.span
+                      <span
                         key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.05 }}
-                        className="px-4 py-2 border rounded-full text-sm font-medium transition-all cursor-default"
-                        style={{
-                          backgroundColor: `${service.color}20`,
-                          color: service.color,
-                          borderColor: `${service.color}40`
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = `${service.color}30`;
-                          e.currentTarget.style.borderColor = service.color;
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = `${service.color}20`;
-                          e.currentTarget.style.borderColor = `${service.color}40`;
-                        }}
+                        className="px-3 py-1.5 border border-white/10 bg-white/5 rounded-md text-sm text-white/70"
                       >
                         {tech}
-                      </motion.span>
+                      </span>
                     ))}
                   </div>
                 </div>
 
                 {/* CTA */}
-                <div className="pt-4">
+                <div className="pt-2">
                   <a
                     href={service.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full py-4 px-6 rounded-lg font-semibold text-white text-center transition-all duration-300 flex items-center justify-center gap-2"
-                    style={{
-                      background: `linear-gradient(135deg, ${service.color}, ${service.color}CC)`
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = `0 10px 30px ${service.color}50`;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}
+                    className="block w-full py-3 px-6 rounded-lg font-medium text-white text-center transition-colors flex items-center justify-center gap-2"
+                    style={{ backgroundColor: service.color }}
                   >
                     <span>Learn More</span>
-                    <BsArrowUpRight size={18} />
+                    <BsArrowUpRight size={16} />
                   </a>
                 </div>
               </div>
             </ScrollArea>
-
-            {/* Footer */}
-            <div className="border-t border-white/10 p-4 bg-white/5">
-              <button
-                onClick={onClose}
-                className="w-full py-3 rounded-lg font-semibold text-white transition-all duration-300"
-                style={{
-                  background: `linear-gradient(135deg, ${service.color}, ${service.color}CC)`
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = '0.9';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = '1';
-                }}
-              >
-                Close
-              </button>
-            </div>
           </motion.div>
         </motion.div>
       )}
@@ -282,55 +208,34 @@ const ServiceCard = ({ service, index }) => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 + index * 0.1, duration: 0.6 }}
-        className="flex flex-col justify-between gap-6 group border border-white/10 rounded-2xl p-8 transition-all duration-500 bg-white/5 backdrop-blur-sm cursor-pointer relative overflow-hidden"
+        transition={{ delay: 0.06 + index * 0.06, duration: 0.5 }}
+        className="flex flex-col justify-between gap-5 group border border-white/10 rounded-xl p-7 transition-colors duration-300 bg-white/[0.03] hover:border-white/20 cursor-pointer relative overflow-hidden"
         onClick={() => setIsModalOpen(true)}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.borderColor = service.color;
-          e.currentTarget.style.boxShadow = `0 20px 60px ${service.color}30`;
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-          e.currentTarget.style.boxShadow = 'none';
-        }}
       >
         {/* Expand Icon */}
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity"
-          style={{ color: service.color }}
-        >
-          <FaExpand size={16} />
-        </motion.div>
+        <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity text-white/40">
+          <FaExpand size={14} />
+        </div>
 
         {/* Top Section */}
-        <div className="w-full flex justify-between items-start">
-          <div className="flex items-center gap-4">
-            <motion.div
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl"
-              style={{ color: service.color }}
-            >
-              {service.icon}
-            </motion.div>
-            <div className="text-5xl font-extrabold opacity-30 group-hover:opacity-50 transition-all"
-              style={{ color: service.color }}
-            >
-              {service.num}
-            </div>
+        <div className="flex items-center gap-3">
+          <div className="text-3xl" style={{ color: service.color }}>
+            {service.icon}
+          </div>
+          <div className="text-3xl font-semibold opacity-20 text-white">
+            {service.num}
           </div>
         </div>
 
         {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-bold leading-tight text-white group-hover:text-gradient transition-all duration-500">
+        <h2 className="text-xl md:text-2xl font-semibold leading-tight text-white">
           {service.title}
         </h2>
 
         {/* Short Description */}
-        <p className="text-base text-white/80 leading-relaxed group-hover:text-white/90 transition-all">
+        <p className="text-sm text-white/60 leading-relaxed">
           {service.shortDesc}
         </p>
 
@@ -339,25 +244,13 @@ const ServiceCard = ({ service, index }) => {
           {service.technologies.slice(0, 4).map((tech, idx) => (
             <span
               key={idx}
-              className="text-xs px-3 py-1 border rounded-full"
-              style={{
-                backgroundColor: `${service.color}10`,
-                color: service.color,
-                borderColor: `${service.color}30`
-              }}
+              className="text-xs px-2.5 py-1 border border-white/10 bg-white/[0.03] rounded-md text-white/50"
             >
               {tech}
             </span>
           ))}
           {service.technologies.length > 4 && (
-            <span
-              className="text-xs px-3 py-1 border rounded-full font-semibold"
-              style={{
-                backgroundColor: `${service.color}20`,
-                color: service.color,
-                borderColor: `${service.color}40`
-              }}
-            >
+            <span className="text-xs px-2.5 py-1 border border-white/10 bg-white/5 rounded-md text-white/50">
               +{service.technologies.length - 4}
             </span>
           )}
@@ -365,45 +258,19 @@ const ServiceCard = ({ service, index }) => {
 
         {/* Bottom Section */}
         <div className="flex items-center justify-between pt-4 border-t border-white/10">
-          <span className="text-sm font-semibold transition-all"
-            style={{ color: service.color }}
-          >
-            Click to explore details →
+          <span className="text-sm font-medium text-white/50">
+            View details →
           </span>
           <a
             href={service.href}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="w-[50px] h-[50px] rounded-full border flex justify-center items-center transition-all duration-500 hover:-rotate-45"
-            style={{
-              backgroundColor: `${service.color}20`,
-              borderColor: `${service.color}40`,
-              color: service.color
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = service.color;
-              e.currentTarget.style.borderColor = service.color;
-              e.currentTarget.style.color = 'white';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = `${service.color}20`;
-              e.currentTarget.style.borderColor = `${service.color}40`;
-              e.currentTarget.style.color = service.color;
-            }}
+            className="w-[42px] h-[42px] rounded-full border border-white/10 bg-white/5 flex justify-center items-center transition-colors duration-300 text-white/60 hover:text-white hover:border-white/20"
           >
-            <BsArrowUpRight className="text-xl" />
+            <BsArrowUpRight className="text-base" />
           </a>
         </div>
-
-        {/* Decorative gradient line */}
-        <motion.div
-          className="absolute bottom-0 left-0 h-1 rounded-full"
-          style={{ backgroundColor: service.color }}
-          initial={{ width: 0 }}
-          whileHover={{ width: '100%' }}
-          transition={{ duration: 0.5 }}
-        />
       </motion.div>
 
       <ServiceModal
@@ -417,24 +284,24 @@ const ServiceCard = ({ service, index }) => {
 
 const Services = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-16 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
+    <section className="min-h-screen flex flex-col justify-center py-16 bg-[#0b1120]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold mb-4">
-            <span className="text-gradient">My Services</span>
+          <h1 className="text-4xl font-semibold mb-3 text-white">
+            My Services
           </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Comprehensive technical expertise across AI, web development, mobile apps, research, and team leadership
+          <p className="text-white/50 text-base max-w-xl mx-auto">
+            Backend and full-stack development, mobile apps, AI research, and technical leadership.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
